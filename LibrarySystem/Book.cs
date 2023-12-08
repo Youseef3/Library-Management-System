@@ -60,6 +60,10 @@ namespace LibrarySystem
             }
 
         }
+        public override string ToString()
+        {
+            return $"Title: {Title}, Author: {Author}, ISBN: {ISBN}";
+        }
 
 
 
