@@ -7,7 +7,7 @@ namespace LibrarySystem
         public string ISBN { get; private set; }
         public string Title { get; private set; }
         public string Author { get; private set; }
-        public bool CheckedOut { get; private set; }
+        public bool CheckedOut { get; set; }
 
         public Book(string isbn, string title, string author)
         {
@@ -21,44 +21,6 @@ namespace LibrarySystem
             ISBN = isbn;
             Author = author;
             CheckedOut = false;
-        }
-
-
-
-
-        // Function for checking if the book is checked out
-        public bool CheckOut()
-        {
-            if (CheckedOut)
-            {
-                Console.WriteLine($"Sorry, {Title} is already checked out!");
-                return false;
-            }
-            else
-            {
-                Console.WriteLine($"{Title} is now checked out!");
-                CheckedOut = true;
-                return true;
-            }
-
-        }
-
-        // Function for returning a book
-        public bool ReturnBook()
-        {
-            if (CheckedOut)
-            {
-                Console.WriteLine($"You've successfully returned {Title}.");
-                CheckedOut = false;
-                return true;
-
-            }
-            else
-            {
-                Console.WriteLine($"{Title} cannot be returned as it was never checked out!");
-                return false;
-            }
-
         }
         public override string ToString()
         {

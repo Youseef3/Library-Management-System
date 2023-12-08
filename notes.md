@@ -37,4 +37,4 @@ return_book(library, isbn): Returns a borrowed book to the library. Removes the 
 
 Driver/Main:
 
-A small section of code to demonstrate the functionality of the system. Add a few sample books to the library, create a user, have the user borrow and return a book, etc.
+A small section of code to demonstrate the functionality of the system.
